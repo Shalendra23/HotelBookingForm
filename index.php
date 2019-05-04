@@ -52,8 +52,6 @@ require_once 'connect.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hotel Booking App</title>
     <link rel="icon" href="#">
-    <!-- Bootstrap core CSS 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
@@ -140,6 +138,7 @@ echo '<div class="info">'; // info Div to Confim booking
      
        header('location:'.$_SERVER['PHP_SELF']);
        return;
+     
  
  }
      
@@ -151,7 +150,27 @@ echo '<div class="info">'; // info Div to Confim booking
 
             $daysBooked = $duration->format('%d');
 
+        
+        // Check for Duplicate Bookings - Validation 
+             
+     $checkName = $_SESSION['firstName'];
+     
+         // Check for duplicate booking - using firstname as Key
+        
+                $query = "SELECT * from bookings where firstname = '$checkName'";
+                        $result = mysqli_query($conn, $query);
 
+                        if(mysqli_num_rows($result) > 0)
+                        {
+                            echo "<span> There is an existing booking for </span> <br>";
+                            // Associative array
+                              while($row = mysqli_fetch_assoc($result))
+    {
+                            echo  $row['firstname'] ." ". $row['surname'] . " at the ". $row['hotelname'] ." from the ". $row['indate'] ." to the ". $row['outdate'] . " booked on the ". $row['datetime'] . " <br> <br>";
+                              }
+
+                        } else {
+                            
                  echo "<span> Guest Name: </span>" . $_SESSION['firstName'] . " " .  $_SESSION['surName'] ."<br><span>  Check-In Date: </span> " .  $_SESSION['inDate'] ."<br> <span> Check-Out Date: </span>  " .  $_SESSION['outDate'] ."<br> <span> Hotel Name: </span> " .  $_SESSION['hotelname'] . "<br>" ;
 
             if (($duration->format('%R')) == '+'){
@@ -227,7 +246,12 @@ echo '<div class="info">'; // info Div to Confim booking
                
   
                 echo "New records created successfully";
-           
+                
+                echo '<a href="clearData.php">Clear Session Data</a>';    
+    
+                           
+                        }
+        
             }
            
         
@@ -238,9 +262,9 @@ echo '<div class="info">'; // info Div to Confim booking
     
     
 ?>
-      </div>
-     </div>
-    </div>
+      </div> <!-- end div Contact -->
+     </div><!-- end div Wrapper -->
+    </div><!-- end div Container -->
     
   
     </div> <!-- end div Container -->
