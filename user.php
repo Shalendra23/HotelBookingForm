@@ -1,6 +1,6 @@
 <?php
 
-//User details for access to the hotel DB used for the Creation and Access of the bookings table
+//User details for access to the hotel DB used for the Creation and Access of the bookings table using OOP approach
 
 define ('DB_SERVER', 'localhost');
 define ('DB_USERNAME', 'hoteluser');

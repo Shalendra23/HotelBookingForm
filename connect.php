@@ -4,7 +4,7 @@
 
 require_once 'user.php';
 
-// create connection to the hotel DB
+// create connection to the hotel DB using OOP approach
 
 $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
