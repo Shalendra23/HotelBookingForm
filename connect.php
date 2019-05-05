@@ -1,6 +1,6 @@
 <?php
 
-// import the user details for connection to the DB
+// import the user details from user.php for connection to the DB
 
 require_once 'user.php';
 
@@ -13,5 +13,5 @@ $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 if($conn->connect_error){
     die ("Connection Failed " . $conn->connect_error());
 }else 
-    echo "Connection Successfull";
+    echo "<script> console.log('Connection Successful'); </script>"; 
 ?>

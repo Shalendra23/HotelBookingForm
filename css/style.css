@@ -16,7 +16,7 @@ body{
 }
 
 .container{
-    max-width: 1600px;
+    max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
@@ -47,7 +47,7 @@ body{
 
 .company-info h3{
     text-align: center;
-    
+        
 }
 
 .contact{
@@ -80,6 +80,7 @@ body{
     width: 100%;
     border: 1px solid #c9e6ff;
     padding: 0.5em;
+    font-family: 'Roboto', sans-serif;
 }
 
 .contact form button{
@@ -95,6 +96,12 @@ body{
     transition: background-color 2s ease-out;
 }
 
+.info form button:hover, .info form button:focus{
+    background: #66ff66;
+    color: #000;
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
 
 .info{
     text-align: center;
@@ -104,6 +111,11 @@ body{
     color: red;
 }
 
+.info form{
+    display: grid;
+    grid-template-columns: 1fr;
+        
+    }
 
 /*large screen*/
 
@@ -112,13 +124,13 @@ body{
         display: grid;
         grid-template-columns: 1fr 2fr;
     }
+    .company-info h3{
+       margin-top: 25%;
+    
+}
     
     .wrapper > *{
         padding: 2em;
-    }
-    
-    .company-info h3{
-        text-align: left;
     }
     
     .info form{
