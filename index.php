@@ -234,12 +234,13 @@
 
                         echo " <script> console.log('New records created successfully'); </script>"; 
                         echo "Booking Confirmed - Thank you for using the Hotel Booking App, Enjoy your stay";
-                        echo "<br>";
-                        echo '<a href="clearData.php">Clear Session Data</a>';    
-
-                                }
+                        echo "<br> <br>";
+                        echo '<a class="btn" href="clearData.php">Start a New Booking</a>';    
+                      
+                        }
                     }
 
+                
                  echo '</div>'; // closing info Div to Confim booking
 
             }
