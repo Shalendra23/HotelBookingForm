@@ -1,10 +1,10 @@
-"# HotelBookingForm" 
+﻿"# HotelBookingForm" 
 
 HotelBooking App
 This project is an Advanced PHP & MySQL project for CodeSapce - using session storage, MYSQL & PHPt to create Hotel Booking App with persistant data.
 
 Database Structure ❤
-
+```
 DB name : hotel 
 Table : bookings
 
@@ -21,7 +21,9 @@ Table : bookings
 | datetime  | timestamp   | NO   |     | CURRENT_TIMESTAMP |                |
 +-----------+-------------+------+-----+-------------------+----------------+
 
+```
 
+```
 Sample Data
 
 +-----+--------------+------------------+-------------------------------+------------+------------+--------+---------------------+
@@ -31,7 +33,7 @@ Sample Data
 |   2 | Shalendra    | Singh            | Taj Cape Town                 | 2019-05-04 | 2019-05-16 | NULL   | 2019-05-04 19:15:26 |
 |   3 | Urisha       | Brijlal          | Twelve Apostles Hotel and Spa | 2019-05-10 | 2019-05-17 | NULL   | 2019-05-04 19:15:44 |
 +-----+--------------+------------------+-------------------------------+------------+------------+--------+---------------------+
-
+```
 
 🤷‍ Why?
 
