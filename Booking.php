@@ -11,6 +11,8 @@ class Booking{
     public function __construct($firstName,$surName,$inDate,$outDate,$hotelName)
     {
         
+        // add in writing to a DB and create a connection & creating of the Table 
+        
         $this->firstname = $firstName;
         $this->surname = $surName;
         $this->inDate = $inDate;
@@ -19,6 +21,13 @@ class Booking{
         
     }
     
+    
+    
+    //Method userinputs
+    //Check Duplicates - generic 
+    // confirm booking 
+    // write to the DB
+    // display
     
     
     public function calcDuration(){
@@ -100,6 +109,10 @@ class Booking{
         
         
          echo '<form name="confirmBooking" action="index.php" method="post">'; 
+                                    
+                                    // already in php delim - 
+                                    // "<form action=". htmlspecialchars($_SERVER["PHP_SELF"]) .
+                                    // method='post' ><input></form>
 
            echo '<button type="submit" class="btn btn-success" name = "confim" value = "confim">Confirm Booking </button>';
 

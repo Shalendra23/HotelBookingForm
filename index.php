@@ -114,6 +114,14 @@
 
         <?php
 
+            // methods - 1 directive per method
+            // session
+            // daysBooked
+            // cost
+            // duplicates
+            // display info 
+            
+            // populate DB
         
         echo '<div class="info">'; // info Div to Confim booking
 
